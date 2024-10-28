@@ -4,6 +4,15 @@ spring:
     url: jdbc:mysql://localhost:3306/travel_package
     username: root
     password: root
+  data:
+    jpa:
+      open-in-view: false
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+      properties:
+        hybernate:
+          format_sql: true
 
 springdoc:
   api-docs:

@@ -2,17 +2,17 @@
 
 ---
 
-### Перед запуском
-читать travel-packege
-
 ### Documentation
+swagger doc: http://localhost:8080/api-doc
+
 swagger url: http://localhost:8081/api-ui
 
-### Общее описание сервиса
+### General review project
 
     jdk 21
     lombok 1.18.34
-    Hybeernate
+    mapstruct
+    hybeernate
     mySQL 
 
 ---

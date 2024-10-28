@@ -1,13 +1,12 @@
-package com.itstep.travel_package.model.dto;
+package com.itstep.travel_package.model.dto.create;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class TravelDto {
+public class TravelCreateDto {
 
-    private Integer id;
     private String name;
     private Integer travelTypesId;
     private Integer travelTransportId;

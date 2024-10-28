@@ -1,8 +1,5 @@
-server:
-  port: 8081
-
 spring:
   application:
-    name: travel_package
+    name: travel-package
   profiles:
     active: dev

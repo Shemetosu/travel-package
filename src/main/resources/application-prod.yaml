@@ -4,3 +4,5 @@ spring:
     url: jdbc:mysql://localhost:3306/travel_package
     username: ${USERNAME}
     password: ${PASSWORD}
+  jpa:
+    open-in-view: false
