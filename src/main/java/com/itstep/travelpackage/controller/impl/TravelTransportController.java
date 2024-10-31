@@ -1,10 +1,10 @@
 package com.itstep.travelpackage.controller.impl;
 
 import com.itstep.travelpackage.controller.BaseController;
-import com.itstep.travelpackage.model.dto.TravelDto;
-import com.itstep.travelpackage.model.dto.create.TravelCreateDto;
-import com.itstep.travelpackage.model.dto.update.TravelUpdateDto;
-import com.itstep.travelpackage.service.TravelTransportService;
+import com.itstep.travelpackage.facade.TravelFacade;
+import com.itstep.travelpackage.model.dto.TravelTransportDto;
+import com.itstep.travelpackage.model.dto.create.TravelTransportCreateDto;
+import com.itstep.travelpackage.model.dto.update.TravelTransportUpdateDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,27 +14,27 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/transports")
-public class TravelTransportController implements BaseController<TravelDto, TravelCreateDto, TravelUpdateDto> {
+public class TravelTransportController implements BaseController<TravelTransportDto, TravelTransportCreateDto, TravelTransportUpdateDto> {
 
-    private final TravelTransportService service;
+    private final TravelFacade travelFacade;
 
     @Override
-    public ResponseEntity<TravelDto> findOne(Integer id) {
-        return new ResponseEntity<>(service.findOne(id), HttpStatus.OK);
+    public ResponseEntity<TravelTransportDto> findOne(Integer id) {
+        return new ResponseEntity<>(travelFacade.findOneTravelTransport(id), HttpStatus.OK);
     }
 
     @Override
-    public ResponseEntity<TravelDto> create(TravelCreateDto dto) {
-        return null;
+    public ResponseEntity<TravelTransportDto> create(TravelTransportCreateDto dto) {
+        return new ResponseEntity<>(travelFacade.createTravelTransport(dto), HttpStatus.OK);
     }
 
     @Override
-    public ResponseEntity<TravelDto> update(TravelUpdateDto dto) {
-        return null;
+    public ResponseEntity<TravelTransportDto> update(TravelTransportUpdateDto dto) {
+        return new ResponseEntity<>(travelFacade.updateTravelTransport(dto), HttpStatus.OK);
     }
 
     @Override
     public void remove(Integer id) {
-        service.remove(id);
+        travelFacade.removeTravelTransport(id);
     }
 }

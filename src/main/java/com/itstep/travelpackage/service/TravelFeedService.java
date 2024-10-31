@@ -1,4 +1,6 @@
 package com.itstep.travelpackage.service;
 
-public interface TravelFeedService extends BaseService {
+import com.itstep.travelpackage.model.entity.TravelFeed;
+
+public interface TravelFeedService extends BaseService<TravelFeed> {
 }
