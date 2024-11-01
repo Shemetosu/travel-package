@@ -7,10 +7,10 @@ import lombok.Setter;
 @Setter
 public class TravelDto {
 
-    private Integer id;
+    private Long id;
     private String name;
-    private Integer travelTypesId;
-    private Integer travelTransportId;
-    private Integer travelFeedId;
-    private Integer daysCount;
+    private Long travelTypeId;
+    private Long travelTransportId;
+    private Long travelFeedId;
+    private Long daysCount;
 }

@@ -17,7 +17,7 @@ public class TravelTypeServiceImpl implements TravelTypeService {
     private TravelTypeRepository repository;
 
     @Override
-    public TravelType findOne(Integer id) {
+    public TravelType findOne(Long id) {
         return repository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException("Type of travel not found by id: " + id)
         );
@@ -44,7 +44,7 @@ public class TravelTypeServiceImpl implements TravelTypeService {
     }
 
     @Override
-    public void remove(Integer id) {
+    public void remove(Long id) {
         repository.deleteById(id);
     }
 }

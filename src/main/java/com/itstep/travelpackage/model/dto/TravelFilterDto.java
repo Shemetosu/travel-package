@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 public class TravelFilterDto {
 
-    private Integer travelTypeId;
-    private Integer travelTransportId;
-    private Integer travelFeedId;
-    private Integer daysCountFrom;
-    private Integer daysCountTo;
+    private Long travelTypeId;
+    private Long travelTransportId;
+    private Long travelFeedId;
+    private Long daysCountFrom;
+    private Long daysCountTo;
 }

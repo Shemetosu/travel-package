@@ -15,6 +15,6 @@ import java.util.List;
 @Table(name = "travel_feed")
 public class TravelFeed extends BaseEntity {
 
-    @OneToMany(mappedBy = "travel_feed")
+    @OneToMany(mappedBy = "travelFeed")
     private List<Travel> travelList;
 }

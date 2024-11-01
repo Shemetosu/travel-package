@@ -7,6 +7,6 @@ import lombok.Setter;
 @Setter
 public class TravelTransportDto {
 
-    private Integer id;
+    private Long id;
     private String name;
 }

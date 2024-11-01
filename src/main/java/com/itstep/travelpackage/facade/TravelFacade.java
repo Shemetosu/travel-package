@@ -15,43 +15,43 @@ import com.itstep.travelpackage.model.dto.update.TravelUpdateDto;
 
 public interface TravelFacade {
 
-    TravelDto findOneTravel(Integer id);
+    TravelDto findOneTravel(Long id);
 
     TravelDto createTravel(TravelCreateDto dto);
 
     TravelDto updateTravel(TravelUpdateDto dto);
 
-    void removeTravel(Integer id);
+    void removeTravel(Long id);
 
     //--
 
-    TravelTypeDto findOneTravelType(Integer id);
+    TravelTypeDto findOneTravelType(Long id);
 
     TravelTypeDto createTravelType(TravelTypeCreateDto dto);
 
     TravelTypeDto updateTravelType(TravelTypeUpdateDto dto);
 
-    void removeTravelType(Integer id);
+    void removeTravelType(Long id);
 
     //--
 
-    TravelTransportDto findOneTravelTransport(Integer id);
+    TravelTransportDto findOneTravelTransport(Long id);
 
     TravelTransportDto createTravelTransport(TravelTransportCreateDto dto);
 
     TravelTransportDto updateTravelTransport(TravelTransportUpdateDto dto);
 
-    void removeTravelTransport(Integer id);
+    void removeTravelTransport(Long id);
 
     //--
 
-    TravelFeedDto findOneTravelFeed(Integer id);
+    TravelFeedDto findOneTravelFeed(Long id);
 
     TravelFeedDto createTravelFeed(TravelFeedCreateDto dto);
 
     TravelFeedDto updateTravelFeed(TravelFeedUpdateDto dto);
 
-    void removeTravelFeed(Integer id);
+    void removeTravelFeed(Long id);
 
     //--
 }

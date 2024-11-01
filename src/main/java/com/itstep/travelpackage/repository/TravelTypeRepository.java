@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TravelTypeRepository extends JpaRepository<TravelType, Integer>, JpaSpecificationExecutor<TravelType> {
+public interface TravelTypeRepository extends JpaRepository<TravelType, Long>, JpaSpecificationExecutor<TravelType> {
 }

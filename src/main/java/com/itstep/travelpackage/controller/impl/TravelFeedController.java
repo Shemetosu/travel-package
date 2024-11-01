@@ -19,7 +19,7 @@ public class TravelFeedController implements BaseController<TravelFeedDto, Trave
     private final TravelFacade travelFacade;
 
     @Override
-    public ResponseEntity<TravelFeedDto> findOne(Integer id) {
+    public ResponseEntity<TravelFeedDto> findOne(Long id) {
         return new ResponseEntity<>(travelFacade.findOneTravelFeed(id), HttpStatus.OK);
     }
 
@@ -34,7 +34,7 @@ public class TravelFeedController implements BaseController<TravelFeedDto, Trave
     }
 
     @Override
-    public void remove(Integer id) {
+    public void remove(Long id) {
         travelFacade.removeTravelFeed(id);
     }
 }

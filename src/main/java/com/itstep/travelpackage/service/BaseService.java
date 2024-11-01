@@ -6,7 +6,7 @@ import org.springframework.data.jpa.domain.Specification;
 
 public interface BaseService<E> {
 
-    E findOne(Integer id);
+    E findOne(Long id);
 
     Page<E> findAll(Pageable pageable);
 
@@ -16,5 +16,5 @@ public interface BaseService<E> {
 
     E update(E entity);
 
-    void remove(Integer id);
+    void remove(Long id);
 }

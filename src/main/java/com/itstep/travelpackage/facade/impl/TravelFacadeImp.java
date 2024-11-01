@@ -17,6 +17,7 @@ import com.itstep.travelpackage.model.dto.update.TravelFeedUpdateDto;
 import com.itstep.travelpackage.model.dto.update.TravelTransportUpdateDto;
 import com.itstep.travelpackage.model.dto.update.TravelTypeUpdateDto;
 import com.itstep.travelpackage.model.dto.update.TravelUpdateDto;
+import com.itstep.travelpackage.model.entity.Travel;
 import com.itstep.travelpackage.service.TravelFeedService;
 import com.itstep.travelpackage.service.TravelService;
 import com.itstep.travelpackage.service.TravelTransportService;
@@ -40,12 +41,17 @@ public class TravelFacadeImp implements TravelFacade {
     //---
 
     @Override
-    public TravelDto findOneTravel(Integer id) {
+    public TravelDto findOneTravel(Long id) {
         return travelConverter.convert(travelService.findOne(id));
     }
 
     @Override
     public TravelDto createTravel(TravelCreateDto dto) {
+        Travel travel = travelConverter.convert(dto);
+        travel.setTravelType(travelTypeService.findOne(dto.getTravelTypeId()));
+        travel.setTravelTransport(travelTransportService.findOne(dto.getTravelTransportId()));
+        travel.setTravelFeed(travelFeedService.findOne(dto.getTravelFeedId()));
+        travel.setTravelFeed(travelFeedService.findOne(dto.getDaysCount()));
         return travelConverter.convert(
                 travelService.create(
                         travelConverter.convert(dto)
@@ -55,21 +61,23 @@ public class TravelFacadeImp implements TravelFacade {
 
     @Override
     public TravelDto updateTravel(TravelUpdateDto dto) {
-//        Travel travel = travelConverter.convert(travelService.findOne(dto.getId()), dto);
-//        return travelConverter.convert(
-//                travelService.update(travel);
-        return null;
+        Travel travel = travelService.findOne(dto.getId());
+        travel = travelConverter.convert(dto);
+        travel.setTravelType(travelTypeService.findOne(dto.getTravelTypeId()));
+        travel.setTravelTransport(travelTransportService.findOne(dto.getTravelTransportId()));
+        travel.setTravelFeed(travelFeedService.findOne(dto.getDaysCount()));
+        return travelConverter.convert(travelService.update(travel));
     }
 
     @Override
-    public void removeTravel(Integer id) {
+    public void removeTravel(Long id) {
         travelService.remove(id);
     }
 
     //---
 
     @Override
-    public TravelTypeDto findOneTravelType(Integer id) {
+    public TravelTypeDto findOneTravelType(Long id) {
         return travelTypeConverter.convert(travelTypeService.findOne(id));
     }
 
@@ -88,14 +96,14 @@ public class TravelFacadeImp implements TravelFacade {
     }
 
     @Override
-    public void removeTravelType(Integer id) {
+    public void removeTravelType(Long id) {
         travelTypeService.remove(id);
     }
 
     //---
 
     @Override
-    public TravelTransportDto findOneTravelTransport(Integer id) {
+    public TravelTransportDto findOneTravelTransport(Long id) {
         return travelTransportConverter.convert(travelTransportService.findOne(id));
     }
 
@@ -114,14 +122,14 @@ public class TravelFacadeImp implements TravelFacade {
     }
 
     @Override
-    public void removeTravelTransport(Integer id) {
+    public void removeTravelTransport(Long id) {
         travelTransportService.remove(id);
     }
 
     //---
 
     @Override
-    public TravelFeedDto findOneTravelFeed(Integer id) {
+    public TravelFeedDto findOneTravelFeed(Long id) {
         return travelFeedConverter.convert(travelFeedService.findOne(id));
     }
 
@@ -140,7 +148,7 @@ public class TravelFacadeImp implements TravelFacade {
     }
 
     @Override
-    public void removeTravelFeed(Integer id) {
+    public void removeTravelFeed(Long id) {
         travelFeedService.remove(id);
     }
 }

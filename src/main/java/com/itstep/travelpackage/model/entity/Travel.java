@@ -12,16 +12,16 @@ import lombok.Setter;
 public class Travel extends BaseEntity {
 
     @Column(name = "travel_type_id", insertable = false, updatable = false)
-    private Integer travelTypeId;
+    private Long travelTypeId;
 
     @Column(name = "travel_transport_id", insertable = false, updatable = false)
-    private Integer travelTransportId;
+    private Long travelTransportId;
 
     @Column(name = "travel_feed_id", insertable = false, updatable = false)
-    private Integer travelFeedId;
+    private Long travelFeedId;
 
     @Column(name = "days_count")
-    private Integer daysCount;
+    private Long daysCount;
 
     @ManyToOne
     @JoinColumn(

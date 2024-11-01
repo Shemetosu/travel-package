@@ -17,7 +17,7 @@ public class TravelFeedServiceImpl implements TravelFeedService {
     private TravelFeedRepository repository;
 
     @Override
-    public TravelFeed findOne(Integer id) {
+    public TravelFeed findOne(Long id) {
         return repository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException("Feed of Travel not found by id: " + id)
         );
@@ -44,7 +44,7 @@ public class TravelFeedServiceImpl implements TravelFeedService {
     }
 
     @Override
-    public void remove(Integer id) {
+    public void remove(Long id) {
         repository.deleteById(id);
     }
 }
