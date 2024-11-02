@@ -9,8 +9,8 @@ public class TravelDto {
 
     private Long id;
     private String name;
-    private Long travelTypeId;
-    private Long travelTransportId;
-    private Long travelFeedId;
-    private Long daysCount;
+    private TravelTypeDto type;
+    private TravelTransportDto transport;
+    private TravelFeedDto feed;
+    private Integer daysCount;
 }

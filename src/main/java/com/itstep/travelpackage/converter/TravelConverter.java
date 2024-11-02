@@ -10,7 +10,12 @@ import java.util.List;
 
 @Mapper(
         componentModel = "spring",
-        implementationPackage = "com.itstep.travelpackage.converter.impl"
+        implementationPackage = "com.itstep.travelpackage.converter.impl",
+        uses = {
+        TravelTypeConverter.class,
+        TravelTransportConverter.class,
+        TravelFeedConverter.class
+}
 )
 public interface TravelConverter {
 

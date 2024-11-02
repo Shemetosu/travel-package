@@ -21,7 +21,7 @@ public class Travel extends BaseEntity {
     private Long travelFeedId;
 
     @Column(name = "days_count")
-    private Long daysCount;
+    private Integer daysCount;
 
     @ManyToOne
     @JoinColumn(

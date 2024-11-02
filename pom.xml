@@ -13,9 +13,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.yourjourney</groupId>
-    <artifactId>TravelPackage</artifactId>
-    <version>1.0</version>
+    <groupId>com.itstep</groupId>
+    <artifactId>travel</artifactId>
+    <version>1.1</version>
 
     <name>travel-package</name>
     <description>See readme.md</description>

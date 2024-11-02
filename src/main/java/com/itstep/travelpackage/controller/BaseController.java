@@ -11,7 +11,8 @@ public interface BaseController<D, DC, DU> {
     @PostMapping("/create")
     ResponseEntity<D> create(@RequestBody DC dto);
 
-    @PostMapping("/create")
+    // todo: post vs put
+    @PostMapping("/update")
     ResponseEntity<D> update(@RequestBody DU dto);
 
     @DeleteMapping("/remove")
