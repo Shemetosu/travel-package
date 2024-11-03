@@ -26,5 +26,5 @@ public class TravelUpdateDto {
     private Long travelFeedId;
 
     private String name;
-    private Long daysCount;
+    private Integer daysCount;
 }

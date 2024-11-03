@@ -65,7 +65,7 @@ public class TravelFacadeImp implements TravelFacade {
         travel.setTravelFeed(travelFeedService.findOne(dto.getTravelFeedId()));
         return travelConverter.convert(
                 travelService.create(
-                        travelConverter.convert(dto)
+                        travelConverter.convert(travel)
                 )
         );
     }
@@ -76,7 +76,7 @@ public class TravelFacadeImp implements TravelFacade {
         travel = travelConverter.convert(dto, travel);
         travel.setTravelType(travelTypeService.findOne(dto.getTravelTypeId()));
         travel.setTravelTransport(travelTransportService.findOne(dto.getTravelTransportId()));
-        travel.setTravelFeed(travelFeedService.findOne(dto.getDaysCount()));
+        travel.setTravelFeed(travelFeedService.findOne(dto.getTravelFeedId()));
         return travelConverter.convert(travelService.update(travel));
     }
 
