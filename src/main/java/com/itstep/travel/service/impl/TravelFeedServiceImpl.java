@@ -1,5 +1,6 @@
 package com.itstep.travel.service.impl;
 
+import com.itstep.travel.exception.NotImplementedException;
 import com.itstep.travel.model.entity.TravelFeed;
 import com.itstep.travel.repository.TravelFeedRepository;
 import com.itstep.travel.service.TravelFeedService;
@@ -9,7 +10,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import com.itstep.travel.exception.NotImplementedException;
 
 import java.util.List;
 

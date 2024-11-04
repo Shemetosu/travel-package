@@ -51,8 +51,8 @@ public class TravelFacadeImp implements TravelFacade {
     @Override
     public List<TravelDto> findAllTravels(Pageable pageable, TravelFilterDto filter) {
         Page<Travel> travelPage = travelService.findAll(
-               Specification.where(TravelSpecification.findAll(filter)),
-               pageable
+                Specification.where(TravelSpecification.findAll(filter)),
+                pageable
         );
         return travelConverter.convert(travelPage.getContent());
     }
@@ -63,11 +63,7 @@ public class TravelFacadeImp implements TravelFacade {
         travel.setTravelType(travelTypeService.findOne(dto.getTravelTypeId()));
         travel.setTravelTransport(travelTransportService.findOne(dto.getTravelTransportId()));
         travel.setTravelFeed(travelFeedService.findOne(dto.getTravelFeedId()));
-        return travelConverter.convert(
-                travelService.create(
-                        travelConverter.convert(travel)
-                )
-        );
+        return travelConverter.convert(travelService.create(travel));
     }
 
     @Override

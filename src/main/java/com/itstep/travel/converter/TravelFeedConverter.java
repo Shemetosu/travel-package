@@ -11,7 +11,7 @@ import java.util.List;
 
 @Mapper(
         componentModel = "spring",
-        implementationPackage = "com.itstep.travelpackage.converter"
+        implementationPackage = "com.itstep.travel.converter.impl"
 )
 public interface TravelFeedConverter {
 

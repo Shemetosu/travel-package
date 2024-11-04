@@ -1,21 +1,24 @@
-## Data Service
+## Travel project
 
 ---
 
 ### Documentation
+swagger url: http://localhost:8080/api-ui
 swagger doc: http://localhost:8080/api-doc
 
-swagger url: http://localhost:8081/api-ui
+---
 
 ### General review project
 
-    jdk 21
-    lombok 1.18.34
+    jdk 17
+    lombok
     mapstruct
     hybeernate
     mySQL 
 
 ---
+
+### Общее описание задачи
 
 17. Туристические путевки.
 Сформировать набор предложений клиенту по выбору туристической путевки различного типа 
