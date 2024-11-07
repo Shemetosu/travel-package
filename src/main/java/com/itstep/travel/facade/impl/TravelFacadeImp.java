@@ -15,6 +15,9 @@ import com.itstep.travel.model.dto.update.TravelTransportUpdateDto;
 import com.itstep.travel.model.dto.update.TravelTypeUpdateDto;
 import com.itstep.travel.model.dto.update.TravelUpdateDto;
 import com.itstep.travel.model.entity.Travel;
+import com.itstep.travel.model.entity.TravelFeed;
+import com.itstep.travel.model.entity.TravelTransport;
+import com.itstep.travel.model.entity.TravelType;
 import com.itstep.travel.repository.specification.TravelSpecification;
 import com.itstep.travel.service.TravelFeedService;
 import com.itstep.travel.service.TravelService;
@@ -104,7 +107,9 @@ public class TravelFacadeImp implements TravelFacade {
 
     @Override
     public TravelTypeDto updateTravelType(TravelTypeUpdateDto dto) {
-        return null;
+        TravelType type = travelTypeService.findOne(dto.getId());
+        type = travelTypeConverter.convert(dto, type);
+        return travelTypeConverter.convert(travelTypeService.update(type));
     }
 
     @Override
@@ -135,7 +140,9 @@ public class TravelFacadeImp implements TravelFacade {
 
     @Override
     public TravelTransportDto updateTravelTransport(TravelTransportUpdateDto dto) {
-        return null;
+        TravelTransport transport = travelTransportService.findOne(dto.getId());
+        transport = travelTransportConverter.convert(dto, transport);
+        return travelTransportConverter.convert(travelTransportService.update(transport));
     }
 
     @Override
@@ -166,7 +173,9 @@ public class TravelFacadeImp implements TravelFacade {
 
     @Override
     public TravelFeedDto updateTravelFeed(TravelFeedUpdateDto dto) {
-        return null;
+        TravelFeed feed = travelFeedService.findOne(dto.getId());
+        feed = travelFeedConverter.convert(dto, feed);
+        return travelFeedConverter.convert(travelFeedService.update(feed));
     }
 
     @Override
