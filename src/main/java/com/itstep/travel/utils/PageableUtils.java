@@ -10,6 +10,7 @@ import org.springframework.data.domain.Sort;
 public class PageableUtils {
 
     public static Pageable buildPageable(int pageNumber, int pageSize, String sortField, String sortOrder) {
+        pageNumber--;
         return StringUtils.isEmpty(sortField)
                 ? PageRequest.of(pageNumber, pageSize)
                 : PageRequest.of(pageNumber, pageSize, Sort.Direction.fromString(sortOrder), sortOrder);

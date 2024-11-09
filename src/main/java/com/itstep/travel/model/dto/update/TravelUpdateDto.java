@@ -14,7 +14,6 @@ public class TravelUpdateDto {
     private Long id;
 
     @NotNull
-    // todo: annotations CheckEx
 //    @CheckEx(validator = CheckExistsTravelById.class)
     private Long travelTypeId;
 
@@ -23,6 +22,7 @@ public class TravelUpdateDto {
     private Long travelTransportId;
 
     @NotNull
+//    @CheckEx(validator = CheckExistsFeedById.class)
     private Long travelFeedId;
 
     private String name;

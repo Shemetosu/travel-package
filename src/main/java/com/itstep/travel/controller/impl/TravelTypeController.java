@@ -8,6 +8,7 @@ import com.itstep.travel.model.dto.update.TravelTypeUpdateDto;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +24,11 @@ public class TravelTypeController implements BaseController<TravelTypeDto, Trave
         return new ResponseEntity<>(travelFacade.findOneTravelType(id), HttpStatus.OK);
     }
 
+    @GetMapping("/all")
+    public ResponseEntity<?> findAll() {
+        return new ResponseEntity<>(travelFacade.findAllTravelTypes(), HttpStatus.OK);
+    }
+
     @Override
     public ResponseEntity<TravelTypeDto> create(TravelTypeCreateDto dto) {
         return new ResponseEntity<>(travelFacade.createTravelType(dto), HttpStatus.OK);
@@ -35,6 +41,6 @@ public class TravelTypeController implements BaseController<TravelTypeDto, Trave
 
     @Override
     public void remove(Long id) {
-        travelFacade.removeTravelTransport(id);
+        travelFacade.removeTravelType(id);
     }
 }
