@@ -60,7 +60,7 @@ public class TravelFacadeImp implements TravelFacade {
                 Specification.where(TravelSpecification.findAll(filter)),
                 pageable
         );
-        log.info("Отобрано записей = {}, страница = {}.", travelPage.getContent().size(), pageable.getPageNumber());
+        log.info("Отобрано записей = {}, страница = {}.", travelPage.getContent().size(), pageable.getPageNumber() + 1);
         return travelConverter.convert(travelPage.getContent());
     }
 

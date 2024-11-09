@@ -1,14 +1,10 @@
 package com.itstep.travel.service.impl;
 
-import com.itstep.travel.exception.NotImplementedException;
 import com.itstep.travel.model.entity.TravelFeed;
 import com.itstep.travel.repository.TravelFeedRepository;
 import com.itstep.travel.service.TravelFeedService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,11 +25,6 @@ public class TravelFeedServiceImpl implements TravelFeedService {
     @Override
     public List<TravelFeed> findAll() {
         return repository.findAll();
-    }
-
-    @Override
-    public Page<TravelFeed> findAll(Specification<TravelFeed> specification, Pageable pageable) {
-        throw new NotImplementedException("Not implemented");
     }
 
     @Override

@@ -1,6 +1,5 @@
 package com.itstep.travel.service.impl;
 
-import com.itstep.travel.exception.NotImplementedException;
 import com.itstep.travel.model.entity.Travel;
 import com.itstep.travel.repository.TravelRepository;
 import com.itstep.travel.service.TravelService;
@@ -10,8 +9,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @AllArgsConstructor
 @Service
@@ -24,11 +21,6 @@ public class TravelServiceImpl implements TravelService {
         return repository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException("Transport of travel not found by id: " + id)
         );
-    }
-
-    @Override
-    public List<Travel> findAll() {
-        throw new NotImplementedException("Not implemented");
     }
 
     @Override

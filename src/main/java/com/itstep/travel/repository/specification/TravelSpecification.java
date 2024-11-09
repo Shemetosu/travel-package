@@ -14,7 +14,7 @@ public class TravelSpecification {
 
     public static Specification<Travel> findAll(TravelFilterDto filter) {
         return (travel, criteriaQuery, criteriaBuilder) -> {
-            List<Predicate> predicateList = new ArrayList<>(4);
+            List<Predicate> predicateList = new ArrayList<>(6);
             if (filter.typeId() != null) {
                 predicateList.add(
                         criteriaBuilder.equal(travel.get("travelTypeId"), filter.typeId())

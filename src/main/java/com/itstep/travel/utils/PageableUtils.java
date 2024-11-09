@@ -13,6 +13,6 @@ public class PageableUtils {
         pageNumber--;
         return StringUtils.isEmpty(sortField)
                 ? PageRequest.of(pageNumber, pageSize)
-                : PageRequest.of(pageNumber, pageSize, Sort.Direction.fromString(sortOrder), sortOrder);
+                : PageRequest.of(pageNumber, pageSize, Sort.Direction.fromString(sortOrder), sortField);
     }
 }

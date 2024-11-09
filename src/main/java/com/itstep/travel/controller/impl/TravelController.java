@@ -29,7 +29,7 @@ public class TravelController implements BaseController<TravelDto, TravelCreateD
 
     @GetMapping("/all")
     public ResponseEntity<?> findAll(@RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
-                                     @RequestParam(name = "pageSize", defaultValue = "2") int pageSize,
+                                     @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                      @RequestParam(name = "sortField", defaultValue = "") String sortField,
                                      @RequestParam(name = "sortOrder", defaultValue = "ASC") String sortOrder,
                                      @RequestParam(name = "typeId", required = false) Long typeId,
