@@ -36,8 +36,8 @@ swagger doc: http://localhost:8080/api-doc
 ### Presentation
 https://www.canva.com/design/DAGWuz1mk6I/Kk9KJ1PRDVo-o09frST9zg/edit?utm_content=DAGWuz1mk6I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-![1.png](..%2FYellow%20Creative%20Travel%20Package%20Thailand%20Instagram%20Post%2F1.png)  
-![2.png](..%2FYellow%20Creative%20Travel%20Package%20Thailand%20Instagram%20Post%2F2.png)  
-![3.png](..%2FYellow%20Creative%20Travel%20Package%20Thailand%20Instagram%20Post%2F3.png)  
-![4.png](..%2FYellow%20Creative%20Travel%20Package%20Thailand%20Instagram%20Post%2F4.png)  
-![5.png](..%2FYellow%20Creative%20Travel%20Package%20Thailand%20Instagram%20Post%2F5.png)  
+![1.png](https://github.com/Shemetosu/travel-package/raw/main/image/1.png)  
+![2.png](https://github.com/Shemetosu/travel-package/raw/main/image/2.png)  
+![3.png](https://github.com/Shemetosu/travel-package/raw/main/image/3.png)  
+![4.png](https://github.com/Shemetosu/travel-package/raw/main/image/4.png)  
+![5.png](https://github.com/Shemetosu/travel-package/raw/main/image/5.png)  
