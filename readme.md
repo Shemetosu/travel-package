@@ -50,11 +50,11 @@ https://www.canva.com/design/DAGWuz1mk6I/Kk9KJ1PRDVo-o09frST9zg/edit?utm_content
 
 ---
 
-![3.png](https://github.com/Shemetosu/travel-package/raw/main/image/3.png)
+![4.png](https://github.com/Shemetosu/travel-package/raw/main/image/4.png)
 
 ---
 
-![4.png](https://github.com/Shemetosu/travel-package/raw/main/image/4.png)
+![3.png](https://github.com/Shemetosu/travel-package/raw/main/image/3.png)
 
 ---
 
