@@ -1,5 +1,6 @@
 package com.itstep.travel.model.dto.create;
 
+import jakarta.validation.constraints.Min;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -15,6 +16,6 @@ public class TravelCreateDto {
     @Length(min = 2, message = "Название путёвки не может быть менее 2 символов.")
     private String name;
 
-    @Length(min = 1, message = "Продолжительность путёвки не может быть менее 1 дня.")
+    @Min(value = 1, message = "Продолжительность путёвки не может быть менее 1 дня.")
     private Integer daysCount;
 }

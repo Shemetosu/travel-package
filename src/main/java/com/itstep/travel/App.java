@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Представление класса App для запуска приложения
+ * Представление класса App для запуска приложения по поиску и сортировке Туристических Путёвок.
  *
- * @author Vladimir Shemetenko
+ * @author Владимир Шеметенко
  * @version 1.2
  */
 @SpringBootApplication

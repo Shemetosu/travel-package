@@ -27,6 +27,6 @@ public class TravelUpdateDto {
     @Length(min = 2, message = "Название путёвки не может быть менее 2 символов.")
     private String name;
 
-    @Length(min = 1, message = "Продолжительность путёвки не может быть менее 1 дня.")
+    @Min(value = 1, message = "Продолжительность путёвки не может быть менее 1 дня.")
     private Integer daysCount;
 }
