@@ -4,6 +4,8 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Length;
+
 
 @Getter
 @Setter
@@ -14,17 +16,17 @@ public class TravelUpdateDto {
     private Long id;
 
     @NotNull
-//    @CheckEx(validator = CheckExistsTravelById.class)
     private Long travelTypeId;
 
     @NotNull
-//    @CheckEx(validator = CheckExistsTransportById.class)
     private Long travelTransportId;
 
     @NotNull
-//    @CheckEx(validator = CheckExistsFeedById.class)
     private Long travelFeedId;
 
+    @Length(min = 2, message = "Название путёвки не может быть менее 2 символов.")
     private String name;
+
+    @Length(min = 1, message = "Продолжительность путёвки не может быть менее 1 дня.")
     private Integer daysCount;
 }

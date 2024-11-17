@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Представление класса App для запуска приложения
  *
  * @author Vladimir Shemetenko
- * @version 1.1
+ * @version 1.2
  */
 @SpringBootApplication
 public class App {
